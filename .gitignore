@@ -1,0 +1,23 @@
+# Android 构建产物
+*.iml
+.gradle/
+/local.properties
+/.idea/
+.DS_Store
+/build/
+/captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.ap_
+
+# 模块构建产物
+app/build/
+
+# Gradle Wrapper（保留必要文件）
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
+# Kiro 本地缓存（保留配置文件）
+.kiro/cache/
