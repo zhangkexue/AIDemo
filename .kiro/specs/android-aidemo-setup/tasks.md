@@ -40,7 +40,7 @@
     - 创建 `detekt.yml`，基于默认配置，启用 complexity、style、potential-bugs 规则集
     - _需求：4.2_
 
-- [ ] 2. 配置 .gitignore 并初始化 Git 仓库
+- [x] 2. 配置 .gitignore 并初始化 Git 仓库
   - [x] 2.1 创建 .gitignore 文件
     - 创建 `.gitignore`，包含以下忽略规则：
       - Android 构建产物：`*.iml`、`.gradle/`、`/local.properties`、`/.idea/`、`.DS_Store`、`/build/`、`/captures/`、`.externalNativeBuild/`、`.cxx/`、`*.apk`、`*.aab`、`*.ap_`
@@ -49,77 +49,77 @@
       - Kiro 本地缓存：`.kiro/cache/`
     - _需求：2.2_
 
-  - [-] 2.2 初始化本地 Git 仓库并关联远程
+  - [x] 2.2 初始化本地 Git 仓库并关联远程
     - 执行 `git init`，设置默认分支为 main
     - 执行 `git remote add origin https://github.com/zhangkexue/AIDemo.git`
     - 执行 `git add .` 和 `git commit -m "chore: initial Android project setup"`
     - _需求：2.1, 2.3_
 
-  - [~] 2.3 推送 main 分支并打 v1.0.0 标签
+  - [x] 2.3 推送 main 分支并打 v1.0.0 标签
     - 执行 `git push -u origin main`
     - 执行 `git tag v1.0.0` 和 `git push origin v1.0.0`
     - _需求：2.3, 2.4_
 
-- [~] 3. 检查点 —— 确认工程结构与 Git 状态
+- [x] 3. 检查点 —— 确认工程结构与 Git 状态
   - 确认所有 Gradle 配置文件存在且语法正确，确认 `.gitignore` 已提交，确认远程仓库关联正确。如有疑问请告知。
 
-- [ ] 4. 创建 Kiro Agent Hooks 配置文件
-  - [~] 4.1 创建 on-save Hook
+- [x] 4. 创建 Kiro Agent Hooks 配置文件
+  - [x] 4.1 创建 on-save Hook
     - 创建 `.kiro/hooks/on-save.yaml`
     - trigger.type = fileEdited，filter = "**/*.kt"
     - action.skill = ktlint-format，args.mode = check
     - onError.block = false，输出中文错误提示
     - _需求：3.1, 3.5_
 
-  - [~] 4.2 创建 post-generate Hook
+  - [x] 4.2 创建 post-generate Hook
     - 创建 `.kiro/hooks/post-generate.yaml`
     - trigger.type = postToolUse，filter = "**/*.kt"
     - action.skill = static-analysis
     - onError.block = false，输出中文错误提示
     - _需求：3.2, 3.5_
 
-  - [~] 4.3 创建 pre-commit Hook
+  - [x] 4.3 创建 pre-commit Hook
     - 创建 `.kiro/hooks/pre-commit.yaml`
     - trigger.type = userTriggered，event = pre-commit
     - action.skill = code-review，args.includeFormat = true
     - onError.block = true，输出中文错误提示（阻止提交）
     - _需求：3.3, 3.5, 3.6_
 
-  - [~] 4.4 创建 pre-push Hook
+  - [x] 4.4 创建 pre-push Hook
     - 创建 `.kiro/hooks/pre-push.yaml`
     - trigger.type = userTriggered，event = pre-push
     - action.skill = static-analysis，args.full = true
     - onError.block = true，输出中文错误提示（阻止推送）
     - _需求：3.4, 3.5, 3.6_
 
-- [ ] 5. 创建 Kiro Agent Skills 配置文件
-  - [~] 5.1 创建 ktlint-format Skill
+- [x] 5. 创建 Kiro Agent Skills 配置文件
+  - [x] 5.1 创建 ktlint-format Skill
     - 创建 `.kiro/skills/ktlint-format.md`，包含 YAML frontmatter（name、description）
     - 描述执行步骤：check 模式调用 `./gradlew ktlintCheck`，format 模式调用 `./gradlew ktlintFormat`
     - 定义输出格式：成功/失败的中文提示模板
     - _需求：4.1, 4.5_
 
-  - [~] 5.2 创建 static-analysis Skill
+  - [x] 5.2 创建 static-analysis Skill
     - 创建 `.kiro/skills/static-analysis.md`，包含 YAML frontmatter
     - 描述执行步骤：依次执行 `./gradlew detekt` 和 `./gradlew lint`，汇总报告
     - 定义输出格式：必须包含问题总数、每个问题的严重级别（error/warning/info）、文件路径和行号
     - _需求：4.2, 4.5, 4.6_
 
-  - [~] 5.3 创建 code-review Skill
+  - [x] 5.3 创建 code-review Skill
     - 创建 `.kiro/skills/code-review.md`，包含 YAML frontmatter
     - 描述执行步骤：获取 `git diff --staged`，AI 审查逻辑正确性/Kotlin 最佳实践/Android 性能/安全隐患
     - 若 includeFormat=true，同时执行 ktlint-format（check 模式）
     - 定义输出格式：Markdown 报告（审查摘要、问题列表、建议改进项）
     - _需求：4.3, 4.5_
 
-  - [~] 5.4 创建 pr-push Skill
+  - [x] 5.4 创建 pr-push Skill
     - 创建 `.kiro/skills/pr-push.md`，包含 YAML frontmatter
     - 描述执行步骤：确认非 main 分支 → `git push origin <branch>` → 通过 GitHub MCP 创建 PR（base: main）
     - 声明依赖：GitHub MCP 服务（需要 GITHUB_TOKEN 环境变量）
     - _需求：4.4, 4.5_
 
-- [ ] 6. 创建 MCP Services 配置
-  - [~] 6.1 创建 .kiro/mcp.json
+- [x] 6. 创建 MCP Services 配置
+  - [x] 6.1 创建 .kiro/mcp.json
     - 创建 `.kiro/mcp.json`，包含三个 MCP 服务：
       - `github`：command=npx，args=["-y","@modelcontextprotocol/server-github"]，env.GITHUB_PERSONAL_ACCESS_TOKEN="${GITHUB_TOKEN}"
       - `context7`：command=npx，args=["-y","@upstash/context7-mcp@latest"]
@@ -127,16 +127,16 @@
     - 确保所有凭证字段使用 `${ENV_VAR}` 格式，不含硬编码字面量
     - _需求：5.1, 5.2, 5.3, 5.4, 5.6_
 
-- [~] 7. 检查点 —— 确认 Kiro 配置完整性
+- [x] 7. 检查点 —— 确认 Kiro 配置完整性
   - 确认 4 个 Hook YAML 文件、4 个 Skill Markdown 文件、mcp.json 均存在且内容正确。如有疑问请告知。
 
-- [ ] 8. 编写属性测试（Kotest）
-  - [~] 8.1 配置 Kotest 属性测试依赖
+- [x] 8. 编写属性测试（Kotest）
+  - [x] 8.1 配置 Kotest 属性测试依赖
     - 在 `app/build.gradle.kts` 的 testImplementation 中添加 `io.kotest:kotest-runner-junit5` 和 `io.kotest:kotest-property`（版本 5.x）
     - 在 `app/build.gradle.kts` 中配置 `tasks.withType<Test> { useJUnitPlatform() }`
     - _需求：1.3_
 
-  - [~] 8.2 编写属性 1 测试：.gitignore 覆盖所有 Android 构建产物
+  - [x] 8.2 编写属性 1 测试：.gitignore 覆盖所有 Android 构建产物
     - 创建 `app/src/test/java/com/zkx/aidemo/GitignorePropertyTest.kt`
     - 使用 `StringSpec` + `forAll`，遍历标准构建产物路径列表（build/、app/build/、.gradle/、*.apk、*.aab 等）
     - 对每个路径调用 `git check-ignore -q <path>`，断言退出码为 0
@@ -157,7 +157,7 @@
     - 注释标注：`// Feature: android-aidemo-setup, Property 3: MCP 配置不包含硬编码凭证`
     - _需求：5.6，属性 3_
 
-- [~] 9. 最终检查点 —— 确认所有测试通过
+- [x] 9. 最终检查点 —— 确认所有测试通过
   - 确保所有测试通过，如有疑问请告知。
 
 ## 备注

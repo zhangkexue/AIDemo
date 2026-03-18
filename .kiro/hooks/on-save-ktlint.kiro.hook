@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "On Save - ktlint Format Check",
+  "description": "Kotlin 文件保存时自动触发 ktlint 格式检查，发现格式问题时提示运行 ktlintFormat 修复",
+  "version": "1",
+  "when": {
+    "type": "fileEdited",
+    "patterns": [
+      "**/*.kt"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "用户刚刚保存了一个 Kotlin 文件。请运行 `./gradlew ktlintCheck` 检查代码格式。如果发现格式问题，输出：❌ ktlint 格式检查失败，请运行 `./gradlew ktlintFormat` 修复格式问题，并列出有问题的文件。如果格式正确，输出：✅ ktlint：所有文件格式正确。"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "enabled": true,
+  "name": "Post Generate - Static Analysis",
+  "description": "AI 生成代码（write 类工具）执行后自动触发静态检测，运行 detekt 和 Android Lint 分析代码质量",
+  "version": "1",
+  "when": {
+    "type": "postToolUse",
+    "toolTypes": [
+      "write"
+    ]
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "AI 刚刚生成或修改了代码文件。请运行静态检测：1) 执行 `./gradlew detekt` 2) 执行 `./gradlew lint`。汇总输出检测报告，格式为：静态检测报告：detekt: N 个问题（X error, Y warning），Android Lint: N 个问题（X error, Y warning）。列出每个问题的严重级别、文件路径和行号。如无问题输出：✅ 静态检测通过，未发现问题。"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "name": "Pre Push - Full Quality Check",
+  "description": "用户手动触发 pre-push 检查，执行完整质量检查流程（detekt + lint + ktlint），发现问题时阻止推送",
+  "version": "1",
+  "when": {
+    "type": "userTriggered"
+  },
+  "then": {
+    "type": "askAgent",
+    "prompt": "用户准备推送代码，请执行完整质量检查流程：1) 运行 `./gradlew detekt` 执行 detekt 静态分析 2) 运行 `./gradlew lint` 执行 Android Lint 3) 运行 `./gradlew ktlintCheck` 检查代码格式。汇总所有检查结果，输出完整质量报告，包含每个问题的严重级别、文件路径和行号。如发现任何 error 级别问题，输出：❌ Pre-push 质量检查失败，推送已阻止。请查看报告并修复所有问题后重新推送。如全部通过，输出：✅ 质量检查全部通过，可以安全推送。"
+  }
+}
