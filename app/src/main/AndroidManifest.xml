@@ -8,12 +8,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDemo">
         <activity
-            android:name=".MainActivity"
+            android:name=".HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".NewsActivity" />
+        <activity android:name=".FinanceActivity" />
+        <activity android:name=".AiActivity" />
+        <activity android:name=".EntertainmentActivity" />
+        <activity android:name=".Game1024Activity" />
+        <activity android:name=".TetrisActivity" />
     </application>
 </manifest>

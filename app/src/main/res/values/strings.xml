@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">AIDemo</string>
+    <string name="card_news">资讯</string>
+    <string name="card_finance">财经</string>
+    <string name="card_ai">AI</string>
+    <string name="card_entertainment">娱乐</string>
+    <string name="title_news">资讯</string>
+    <string name="title_finance">财经</string>
+    <string name="title_ai">AI</string>
+    <string name="title_entertainment">娱乐</string>
+    <string name="title_game_1024">1024</string>
+    <string name="title_tetris">俄罗斯方块</string>
+    <string name="btn_restart">重新开始</string>
+    <string name="dialog_win_title">恭喜！</string>
+    <string name="dialog_win_message">你达到了1024！</string>
+    <string name="dialog_game_over">游戏结束</string>
+    <string name="btn_continue">继续</string>
+    <string name="btn_left">◀</string>
+    <string name="btn_right">▶</string>
+    <string name="btn_rotate">↻</string>
+    <string name="btn_hard_drop">⬇</string>
+    <string name="btn_pause">暂停</string>
+    <string name="btn_resume">继续</string>
+    <string name="label_score">分数: %d</string>
+    <string name="label_level">等级: %d</string>
+    <string name="label_next">下一个</string>
+    <string name="dialog_tetris_game_over_message">最终分数: %d</string>
 </resources>
