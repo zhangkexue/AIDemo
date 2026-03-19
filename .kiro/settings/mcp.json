@@ -16,8 +16,8 @@
       "autoApprove": []
     },
     "android-docs": {
-      "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-fetch"],
+      "command": "uvx",
+      "args": ["mcp-server-fetch"],
       "env": {
         "ALLOWED_DOMAINS": "developer.android.com,docs.gradle.org,kotlinlang.org"
       },
