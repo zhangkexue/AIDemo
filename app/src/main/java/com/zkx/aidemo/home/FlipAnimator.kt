@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.home
 
 import android.animation.AnimatorListenerAdapter
 import android.animation.ObjectAnimator

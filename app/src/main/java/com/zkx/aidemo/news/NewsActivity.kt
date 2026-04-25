@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.news
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

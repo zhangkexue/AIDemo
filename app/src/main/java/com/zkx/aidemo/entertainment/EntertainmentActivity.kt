@@ -1,7 +1,10 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment
 
 import android.content.Intent
 import android.os.Bundle
+import com.zkx.aidemo.entertainment.game1024.Game1024Activity
+import com.zkx.aidemo.entertainment.music.MusicPlayerActivity
+import com.zkx.aidemo.entertainment.tetris.TetrisActivity
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable

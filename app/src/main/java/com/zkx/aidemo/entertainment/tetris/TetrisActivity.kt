@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment.tetris
 
 import android.os.Bundle
 import android.os.Handler

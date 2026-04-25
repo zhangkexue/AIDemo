@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment.game1024
 
 import android.os.Bundle
 import android.view.GestureDetector

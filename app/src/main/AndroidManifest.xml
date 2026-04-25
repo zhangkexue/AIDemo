@@ -22,19 +22,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDemo">
         <activity
-            android:name=".HomeActivity"
+            android:name="com.zkx.aidemo.home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsActivity" />
-        <activity android:name=".FinanceActivity" />
-        <activity android:name=".AiActivity" />
-        <activity android:name=".EntertainmentActivity" />
-        <activity android:name=".Game1024Activity" />
-        <activity android:name=".TetrisActivity" />
-        <activity android:name=".MusicPlayerActivity" />
+        <activity android:name="com.zkx.aidemo.news.NewsActivity" />
+        <activity android:name="com.zkx.aidemo.finance.FinanceActivity" />
+        <activity android:name="com.zkx.aidemo.ai.AiActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.EntertainmentActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.game1024.Game1024Activity" />
+        <activity android:name="com.zkx.aidemo.entertainment.tetris.TetrisActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.music.MusicPlayerActivity" />
     </application>
 </manifest>

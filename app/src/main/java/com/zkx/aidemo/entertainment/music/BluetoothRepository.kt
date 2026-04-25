@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment.music
 
 import android.bluetooth.BluetoothAdapter
 import android.bluetooth.BluetoothDevice
