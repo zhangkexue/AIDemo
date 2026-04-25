@@ -25,4 +25,14 @@
     <string name="label_level">等级: %d</string>
     <string name="label_next">下一个</string>
     <string name="dialog_tetris_game_over_message">最终分数: %d</string>
+    <string name="title_music_player">影音娱乐</string>
+    <string name="music_no_song">暂无歌曲</string>
+    <string name="music_empty">未找到本地音乐，请确认已授予存储权限</string>
+    <string name="music_permission_title">需要存储权限</string>
+    <string name="music_permission_msg">请在系统设置中授予存储权限以读取本地音乐</string>
+    <string name="music_bt_title">蓝牙设备</string>
+    <string name="music_bt_scan">扫描设备</string>
+    <string name="music_bt_scanning">扫描中…</string>
+    <string name="music_bt_empty">未发现设备，点击扫描</string>
+    <string name="music_bt_unknown">未知设备</string>
 </resources>

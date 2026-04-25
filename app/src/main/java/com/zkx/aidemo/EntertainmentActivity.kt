@@ -28,6 +28,9 @@ class EntertainmentActivity : ComponentActivity() {
                 },
                 onTetrisClick = {
                     startActivity(Intent(this, TetrisActivity::class.java))
+                },
+                onMusicClick = {
+                    startActivity(Intent(this, MusicPlayerActivity::class.java))
                 }
             )
         }
@@ -38,7 +41,8 @@ class EntertainmentActivity : ComponentActivity() {
 @Composable
 fun EntertainmentScreen(
     onGame1024Click: () -> Unit,
-    onTetrisClick: () -> Unit
+    onTetrisClick: () -> Unit,
+    onMusicClick: () -> Unit
 ) {
     Scaffold(
         topBar = {
@@ -48,6 +52,7 @@ fun EntertainmentScreen(
         LazyColumn(contentPadding = innerPadding) {
             item { GameListItem(title = "1024", onClick = onGame1024Click) }
             item { GameListItem(title = "俄罗斯方块", onClick = onTetrisClick) }
+            item { GameListItem(title = "影音娱乐", onClick = onMusicClick) }
         }
     }
 }
