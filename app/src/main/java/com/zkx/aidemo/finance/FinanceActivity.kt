@@ -2,6 +2,7 @@ package com.zkx.aidemo.finance
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.zkx.aidemo.R
 
 class FinanceActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

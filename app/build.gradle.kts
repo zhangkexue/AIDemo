@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.zkx.aidemo"
-        minSdk = 21
+        minSdk = 23
         targetSdk = 35
         versionCode = 3
         versionName = "1.0.2"
@@ -62,10 +62,12 @@ dependencies {
     implementation(platform(libs.compose.bom))
     implementation(libs.compose.ui)
     implementation(libs.compose.material3)
+    implementation(libs.compose.material.icons.extended)
     implementation(libs.compose.ui.tooling.preview)
     implementation(libs.compose.activity)
     implementation(libs.lifecycle.viewmodel.compose)
     implementation(libs.lifecycle.runtime.ktx)
+    implementation(libs.androidx.lifecycle.runtime.compose)
     debugImplementation(libs.compose.ui.tooling)
     testImplementation(libs.junit)
     testImplementation(libs.kotest.runner.junit5)

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
+import com.zkx.aidemo.R
 import com.zkx.aidemo.ai.AiActivity
 import com.zkx.aidemo.entertainment.EntertainmentActivity
 import com.zkx.aidemo.finance.FinanceActivity
