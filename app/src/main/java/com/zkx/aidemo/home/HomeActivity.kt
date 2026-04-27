@@ -1,9 +1,14 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.home
 
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.card.MaterialCardView
+import com.zkx.aidemo.R
+import com.zkx.aidemo.ai.AiActivity
+import com.zkx.aidemo.entertainment.EntertainmentActivity
+import com.zkx.aidemo.finance.FinanceActivity
+import com.zkx.aidemo.news.NewsActivity
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

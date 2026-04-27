@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment.game1024
 
 import android.os.Bundle
 import android.view.GestureDetector
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.zkx.aidemo.R
 import kotlin.math.abs
 
 class Game1024Activity : AppCompatActivity() {

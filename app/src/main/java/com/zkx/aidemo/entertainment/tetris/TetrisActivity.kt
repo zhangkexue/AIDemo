@@ -1,4 +1,4 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment.tetris
 
 import android.os.Bundle
 import android.os.Handler
@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.zkx.aidemo.R
 
 class TetrisActivity : AppCompatActivity() {
 

@@ -1,14 +1,15 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.ai
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.zkx.aidemo.R
 
-class FinanceActivity : AppCompatActivity() {
+class AiActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_finance)
+        setContentView(R.layout.activity_ai)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = getString(R.string.title_finance)
+        supportActionBar?.title = getString(R.string.title_ai)
     }
 
     override fun onSupportNavigateUp(): Boolean {

@@ -1,7 +1,8 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.news
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.zkx.aidemo.R
 
 class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

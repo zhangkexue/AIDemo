@@ -1,5 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 本地音乐读取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" android:maxSdkVersion="32" />
+    <uses-permission android:name="android.permission.READ_MEDIA_AUDIO" />
+
+    <!-- 蓝牙权限 (Android 11 及以下) -->
+    <uses-permission android:name="android.permission.BLUETOOTH" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" android:maxSdkVersion="30" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" android:maxSdkVersion="30" />
+
+    <!-- 蓝牙权限 (Android 12+) -->
+    <uses-permission android:name="android.permission.BLUETOOTH_SCAN" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -8,18 +22,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AIDemo">
         <activity
-            android:name=".HomeActivity"
+            android:name="com.zkx.aidemo.home.HomeActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".NewsActivity" />
-        <activity android:name=".FinanceActivity" />
-        <activity android:name=".AiActivity" />
-        <activity android:name=".EntertainmentActivity" />
-        <activity android:name=".Game1024Activity" />
-        <activity android:name=".TetrisActivity" />
+        <activity android:name="com.zkx.aidemo.news.NewsActivity" />
+        <activity android:name="com.zkx.aidemo.finance.FinanceActivity" />
+        <activity android:name="com.zkx.aidemo.ai.AiActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.EntertainmentActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.game1024.Game1024Activity" />
+        <activity android:name="com.zkx.aidemo.entertainment.tetris.TetrisActivity" />
+        <activity android:name="com.zkx.aidemo.entertainment.music.MusicPlayerActivity" />
     </application>
 </manifest>

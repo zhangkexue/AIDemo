@@ -1,7 +1,10 @@
-package com.zkx.aidemo
+package com.zkx.aidemo.entertainment
 
 import android.content.Intent
 import android.os.Bundle
+import com.zkx.aidemo.entertainment.game1024.Game1024Activity
+import com.zkx.aidemo.entertainment.music.MusicPlayerActivity
+import com.zkx.aidemo.entertainment.tetris.TetrisActivity
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.clickable
@@ -28,6 +31,9 @@ class EntertainmentActivity : ComponentActivity() {
                 },
                 onTetrisClick = {
                     startActivity(Intent(this, TetrisActivity::class.java))
+                },
+                onMusicClick = {
+                    startActivity(Intent(this, MusicPlayerActivity::class.java))
                 }
             )
         }
@@ -38,7 +44,8 @@ class EntertainmentActivity : ComponentActivity() {
 @Composable
 fun EntertainmentScreen(
     onGame1024Click: () -> Unit,
-    onTetrisClick: () -> Unit
+    onTetrisClick: () -> Unit,
+    onMusicClick: () -> Unit
 ) {
     Scaffold(
         topBar = {
@@ -48,6 +55,7 @@ fun EntertainmentScreen(
         LazyColumn(contentPadding = innerPadding) {
             item { GameListItem(title = "1024", onClick = onGame1024Click) }
             item { GameListItem(title = "俄罗斯方块", onClick = onTetrisClick) }
+            item { GameListItem(title = "影音娱乐", onClick = onMusicClick) }
         }
     }
 }
